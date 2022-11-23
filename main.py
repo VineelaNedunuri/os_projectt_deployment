@@ -220,7 +220,7 @@ def div3():
         dcc.Dropdown(
                 options=[{'label': i, 'value': i} for i in df_germany.columns],
                 value='Medal',
-                id='xcs-germany-plot',
+                id='xcs-germany-plot-dropdown',
                 style={"width": "50%", "offset":1,},
                 clearable=False,
             ),
@@ -258,7 +258,7 @@ def footer(value="Default value: Hellö."):
       Output(component_id='country-select-output', component_property='children'),
       #Output(component_id='xcs-germany-plot', component_property='children'),
       Input(component_id='search-box-user-input', component_property='value'),)
-     # Input(component_id='xcs-germany-plot', component_property='value'))
+     # Input(component_id='xcs-germany-plot-dropdown', component_property='value'))
 
 def update_output_div(input_value):
     if input_value == None:
